@@ -1,2 +1,2 @@
-# epicode-bootstrap
+# Corso Epicode
 Bootstrap assignments.
