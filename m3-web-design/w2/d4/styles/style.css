@@ -1,0 +1,126 @@
+body {
+    color: #0d3459;
+    font-family: 'Merriweather', sans-serif;
+}
+
+/* Letter spacing */
+section h2,
+section h5,
+.jumbo-title {
+    letter-spacing: -0.5px;
+}
+
+/*  Navbar */
+.nav-bg {
+    background: #fff !important;
+}
+
+/* Jumbotron */
+.jumbotron {
+    overflow: hidden;
+    position: relative;
+    background-color: #d0ebff65;
+}
+
+.jumbotron::before {
+    content: '';
+    z-index: -1;
+    width: 500px;
+    height: 500px;
+    right: -230px;
+    bottom: -250px;
+    position: absolute;
+
+    background: url('../assets/compass.png') no-repeat center;
+    background-size: cover;
+    transform: rotate(-10deg);
+}
+
+.jumbotron figure {
+    background-color: #e7f5ffe8;
+}
+
+@media (min-width: 768px) {
+    .jumbotron::before {
+        right: -75px;
+        bottom: -220px;
+        transform: rotate(-35deg);
+    }
+
+    .jumbotron figure {
+        background: none;
+    }
+}
+
+.jumbotron h1 {
+    font-weight: 900;
+    font-size: 2.441rem;
+}
+
+.jumbotron figure figcaption {
+    color: #4d545b;
+}
+
+/* Ion Icon close section */
+ion-icon {
+    color: #212529;
+    cursor: pointer;
+}
+
+/* Cards */
+.card-text span:first-child {
+    letter-spacing: -1px;
+}
+
+.card-text span:last-child {
+    font-weight: 400;
+    font-size: 0.718rem;
+}
+
+/* Week deals */
+.week-deals .card-description {
+    background: #d0ebff;
+}
+
+/* Welcome summer */
+.welcome-summer h2 {
+    color: #e67700;
+}
+
+.welcome-summer .card-description {
+    background: #fff3bf;
+}
+
+/* Today's deal */
+.today-deal h6 {
+    font-size: 0.9rem;
+}
+
+/* Last minute */
+.last-minute {
+    color: #d9480f;
+}
+
+.last-minute .card {
+    width: 170px;
+    height: 220px;
+}
+
+/* Testimonial */
+.testimonial h2 {
+    color: #4d545b;
+}
+
+.testimonial .card {
+    width: 200px;
+    height: 100%;
+}
+
+.testimonial-img {
+    height: 200px;
+}
+
+/* Hide Content */
+.hidden {
+    display: none;
+}
