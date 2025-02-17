@@ -1,0 +1,29 @@
+.swiper-slide {
+    height: 200px;
+}
+
+@media (min-width: 768px) {
+    .swiper-slide {
+        height: 300px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .swiper-slide {
+        height: 600px;
+    }
+}
+
+@media (max-width: 425px) {
+    .movie-section-description h3 {
+        font-size: 1.1rem;
+    }
+}
+
+.swiper-movies-selection .swiper-slide {
+    height: 200px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff;
+}
