@@ -3,27 +3,41 @@
 }
 
 @media (min-width: 768px) {
-    .swiper-slide {
+    .swiper-hero .swiper-slide {
         height: 300px;
     }
 }
 
 @media (min-width: 1200px) {
-    .swiper-slide {
+    .swiper-hero .swiper-slide {
         height: 600px;
     }
 }
 
-@media (max-width: 425px) {
-    .movie-section-description h3 {
-        font-size: 1.1rem;
+@media (min-width: 2560px) {
+    .swiper-hero .swiper-slide {
+        height: 800px;
     }
 }
 
-.swiper-movies-selection .swiper-slide {
-    height: 200px;
+/* Pagination bullets */
+.swiper-pagination-bullet {
+    vertical-align: middle;
+    --swiper-pagination-bullet-size: 8px;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #fff;
+    background-color: #ffffff;
+    --swiper-pagination-bullet-size: 12px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    --swiper-navigation-size: 30px;
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
