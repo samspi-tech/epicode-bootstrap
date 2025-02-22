@@ -1,0 +1,1426 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white">
+    <div class="container-fluid">
+      <!-- Navbar Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="./assets/logo.svg" alt="logo">
+      </a>
+      <div class="d-flex gap-3 d-lg-none">
+        <!-- Navbar Notification/Profile buttons, Mobile/Tablet -->
+        <div class="d-flex gap-2">
+          <!-- Notification button -->
+          <div class="dropdown">
+            <div class="notification-icon">
+              <ion-icon class="text-body-tertiary bg-body-secondary rounded-circle p-3" name="notifications-outline"
+                type="button" data-bs-toggle="dropdown" aria-expanded="false"></ion-icon>
+              <ion-icon class="notification-alert rounded-circle" name="ellipse-outline"></ion-icon>
+              <!-- Hidden Content -->
+              <div class="dropdown-menu dropdown-menu-end notification-content border shadow-lg p-0 m-0">
+                <img src="https://www.eroicafenice.com/wp-content/uploads/2024/10/eh-volevi-meme.jpg" alt="zeb89"
+                  class="object-fit-cover h-100 w-100 rounded">
+              </div>
+            </div>
+          </div>
+          <!-- Profile button -->
+          <div class="dropdown">
+            <div class="profile-picture">
+              <img src="./assets/avatar-1.jpg" alt="profile picture" class="img-fluid rounded-circle dropdown-toggle"
+                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <ion-icon class="profile-alert rounded-circle" name="ellipse-outline"></ion-icon>
+              <!-- Hidden Content -->
+              <ul class="dropdown-menu dropdown-menu-end">
+                <div class="profile d-flex gap-3 border-bottom p-3">
+                  <div class="profile-picture">
+                    <img src="./assets/avatar-1.jpg" alt="profile picture"
+                      class="img-fluid rounded-circle dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                    <ion-icon class="profile-alert rounded-circle" name="ellipse-outline"></ion-icon>
+                  </div>
+                  <div class="profile-contact fw-medium">
+                    <p class="mb-0">Jenny Wilson</p>
+                    <p class="mb-0 text-body-tertiary">jenny@geeksui.com</p>
+                  </div>
+                </div>
+                <div class="py-3">
+                  <li><a class="dropdown-item d-flex align-items-center gap-3" href="#"><ion-icon
+                        name="person-outline"></ion-icon> Profile</a>
+                  </li>
+                  <li><a class="dropdown-item d-flex align-items-center gap-3" href="#"><ion-icon
+                        name="star-outline"></ion-icon> Subscription</a>
+                  </li>
+                  <li><a class="dropdown-item d-flex align-items-center gap-3" href="#"><ion-icon
+                        name="settings-outline"></ion-icon> Settings</a>
+                  </li>
+                </div>
+                <li><a class="dropdown-item d-flex align-items-center gap-3 border-top py-3" href="#"><ion-icon
+                      name="power-outline"></ion-icon> Sign Out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Toggler button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <!-- Collpased Navbar -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-item mb-0 p-0 d-flex flex-column flex-lg-row gap-4">
+          <div class="dropdown">
+            <a class="link-underline link-underline-opacity-0 dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Browse</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <a class="link-underline link-underline-opacity-0 dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Landings</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <a class="link-underline link-underline-opacity-0 dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Pages</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <a class="link-underline link-underline-opacity-0 dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Accounts</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </ul>
+      </div>
+      <!-- Navbar Notification/Profile buttons, Desktop -->
+      <div class="d-none d-lg-block d-lg-flex gap-2">
+        <!-- Notification button -->
+        <div class="dropdown">
+          <div class="notification-icon">
+            <ion-icon class="text-body-tertiary bg-body-secondary rounded-circle p-3" name="notifications-outline"
+              type="button" data-bs-toggle="dropdown" aria-expanded="false"></ion-icon>
+            <ion-icon class="notification-alert rounded-circle" name="ellipse-outline"></ion-icon>
+            <!-- Hidden Content -->
+            <div class="dropdown-menu dropdown-menu-end notification-content border shadow-lg p-0 m-0">
+              <img src="https://www.eroicafenice.com/wp-content/uploads/2024/10/eh-volevi-meme.jpg" alt="zeb89"
+                class="object-fit-cover h-100 w-100 rounded">
+            </div>
+          </div>
+        </div>
+        <!-- Profile button -->
+        <div class="dropdown">
+          <div class="profile-picture">
+            <img src="./assets/avatar-1.jpg" alt="profile picture" class="img-fluid rounded-circle dropdown-toggle"
+              type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <ion-icon class="profile-alert rounded-circle" name="ellipse-outline"></ion-icon>
+            <!-- Hidden Content -->
+            <ul class="dropdown-menu dropdown-menu-end">
+              <div class="profile d-flex gap-3 border-bottom p-3">
+                <div class="profile-picture">
+                  <img src="./assets/avatar-1.jpg" alt="profile picture"
+                    class="img-fluid rounded-circle dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                  <ion-icon class="profile-alert rounded-circle" name="ellipse-outline"></ion-icon>
+                </div>
+                <div class="profile-contact fw-medium">
+                  <p class="mb-0">Jenny Wilson</p>
+                  <p class="mb-0 text-body-tertiary">jenny@geeksui.com</p>
+                </div>
+              </div>
+              <div class="py-3 border-bottom">
+                <li class="mx-2"><a class="dropdown-item d-flex align-items-center gap-2" href="#"><ion-icon
+                      name="person-outline"></ion-icon> Profile</a>
+                </li>
+                <li class="mx-2"><a class="dropdown-item d-flex align-items-center gap-2" href="#"><ion-icon
+                      name="star-outline"></ion-icon> Subscription</a>
+                </li>
+                <li class="mx-2"><a class="dropdown-item d-flex align-items-center gap-2" href="#"><ion-icon
+                      name="settings-outline"></ion-icon> Settings</a>
+                </li>
+              </div>
+              <li class="mx-2"><a class="dropdown-item d-flex align-items-center gap-2 my-2" href="#"><ion-icon
+                    name="power-outline"></ion-icon> Sign Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Header -->
+  <header class="container-fluid">
+    <div class="jumbotron container">
+      <!-- Hero -->
+      <div class="row">
+        <div class="jumbo-text col-12 col-lg-6 px-4 py-4 d-flex flex-column justify-content-center m-auto">
+          <h1 class="text-capitalize text-white fw-bolder">welcome web students!</h1>
+          <p class="fw-medium">Hand-picked Instructor and expertly crafted courses, designed for the
+            modern
+            students and
+            entrepreneur.</p>
+          <div class="py-3">
+            <button class="btn btn-success fw-bolder py-3 px-3 text-capitalize">browse courses</button>
+            <button class="btn btn-light border-0 fw-bolder py-3 px-3 text-capitalize">are you
+              instructor?</button>
+          </div>
+        </div>
+        <div class="jumbo-img col-12 col-lg-6 px-5">
+          <img src="./assets/hero-img.png" alt="hero image" class="h-100 w-100 object-fit-cover">
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header Bottom Icons -->
+  <div class="container website-info">
+    <div class="row g-4 py-4 ps-3 ps-lg-0">
+      <div class="col-12 col-lg-4 d-flex align-items-center gap-3">
+        <ion-icon class="rounded-circle p-3" name="videocam-outline"></ion-icon>
+        <div>
+          <h6 class="mb-0">30,000 online courses</h6>
+          <p class="mb-0 text-secondary">Enjoy a variety of fresh topics</p>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 d-flex align-items-center gap-3">
+        <ion-icon class="rounded-circle p-3" name="people-outline"></ion-icon>
+        <div>
+          <h6 class="mb-0">Expert Instructions</h6>
+          <p class="mb-0 text-secondary">Find the right instructor for you</p>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 d-flex align-items-center gap-3">
+        <ion-icon class="rounded-circle p-3" name="time-outline"></ion-icon>
+        <div>
+          <h6 class="mb-0">Lifetime access</h6>
+          <p class="mb-0 text-secondary">Learn on your schedule</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main Content -->
+  <main>
+    <!-- Recommended -->
+    <section class="container position-relative pt-5 pb-lg-4">
+      <div class="row ps-1 ps-lg-2 pb-2 pb-md-3 pb-lg-0">
+        <div class="col">
+          <h2>Reccomended to you</h2>
+        </div>
+      </div>
+      <div class="row px-3">
+        <div class="swiper swiper-recommended px-lg-2 py-lg-3">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-graphql.jpg" class="card-img-top" alt="logo graphQl">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">GraphQL: introduction to graphQL for beginners</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">2h 40m</p>
+                      <p class="mb-0 ps-2">🤯</p>
+                      <p class="mb-0">Advance</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">2.5 <small
+                          class="text-body-tertiary">(1,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$500 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$600</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-5.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Brooklyn Simmons</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-javascript.jpg" class="card-img-top" alt="logo javascript">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">A Complete Beginner's Guide to JavaScript</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">4h 10m</p>
+                      <p class="mb-0 ps-2">🤯</p>
+                      <p class="mb-0">Advance</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">3.5 <small
+                          class="text-body-tertiary">(7,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$700 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$850</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-1.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Jenny Wilson</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-node.jpg" class="card-img-top" alt="logo node.js">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0 ellipsis">Beginning Node.js, Express &amp; MongoDB Development</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">2h 00m</p>
+                      <p class="mb-0 ps-2">🙂</p>
+                      <p class="mb-0">Intermediate</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">4.0 <small
+                          class="text-body-tertiary">(15,700)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$800 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$950</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-3.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Sina Ray</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-laravel.jpg" class="card-img-top" alt="logo laravel">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">Laravel: The Ultimate beginner's Guide to Learn</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">1h 00m</p>
+                      <p class="mb-0 ps-2">😁</p>
+                      <p class="mb-0">Beginner</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">4.5 <small
+                          class="text-body-tertiary">(2,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$170 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$220</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-7.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Sobo Rikhan</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-graphql.jpg" class="card-img-top" alt="logo graphQl">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">GraphQL: introduction to graphQL for beginners</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">2h 40m</p>
+                      <p class="mb-0 ps-2">🤯</p>
+                      <p class="mb-0">Advance</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">2.5 <small
+                          class="text-body-tertiary">(1,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$500 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$600</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-5.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Brooklyn Simmons</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-graphql.jpg" class="card-img-top" alt="logo graphQl">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">GraphQL: introduction to graphQL for beginners</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">2h 40m</p>
+                      <p class="mb-0 ps-2">🤯</p>
+                      <p class="mb-0">Advance</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">2.5 <small
+                          class="text-body-tertiary">(1,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$500 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$600</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-5.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Brooklyn Simmons</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-graphql.jpg" class="card-img-top" alt="logo graphQl">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">GraphQL: introduction to graphQL for beginners</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">2h 40m</p>
+                      <p class="mb-0 ps-2">🤯</p>
+                      <p class="mb-0">Advance</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">2.5 <small
+                          class="text-body-tertiary">(1,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$500 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$600</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-5.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Brooklyn Simmons</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-graphql.jpg" class="card-img-top" alt="logo graphQl">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">GraphQL: introduction to graphQL for beginners</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">2h 40m</p>
+                      <p class="mb-0 ps-2">🤯</p>
+                      <p class="mb-0">Advance</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">2.5 <small
+                          class="text-body-tertiary">(1,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$500 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$600</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-5.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Brooklyn Simmons</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- navigation buttons -->
+        <div
+          class="swiper-button-prev recommended-button-prev bg-white text-body-tertiary border  border-success-subtle rounded-circle fw-bolder position-absolute">
+        </div>
+        <div
+          class="swiper-button-next recommended-button-next bg-white text-body-tertiary border border-success-subtle rounded-circle fw-bolder position-absolute">
+        </div>
+      </div>
+    </section>
+    <!-- Popular -->
+    <section class="container position-relative carousel-cards pt-5 pb-lg-4">
+      <div class="row ps-1 ps-lg-2 pb-2 pb-md-3 pb-lg-0">
+        <div class="col">
+          <h2>Most Popular</h2>
+        </div>
+      </div>
+      <div class="row px-3">
+        <div class="swiper swiper-popular px-lg-2 py-lg-3">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-html.jpg" class="card-img-top" alt="logo html">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">HTML Full Course - Build a Website Tutorial</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">3h 16m</p>
+                      <p class="mb-0 ps-2">😁</p>
+                      <p class="mb-0">Beginner</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">3.0 <small
+                          class="text-body-tertiary">(1,600)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$550 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$700</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-8.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Miston Wilson</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-javascript.jpg" class="card-img-top" alt="logo javascript">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">A Complete Beginner's Guide to JavaScript</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">4h 10m</p>
+                      <p class="mb-0 ps-2">🤯</p>
+                      <p class="mb-0">Advance</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">3.5 <small
+                          class="text-body-tertiary">(7,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$700 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$850</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-1.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Jenny Wilson</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-node.jpg" class="card-img-top" alt="logo node.js">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0 ellipsis">Beginning Node.js, Express &amp; MongoDB Development</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">2h 00m</p>
+                      <p class="mb-0 ps-2">🙂</p>
+                      <p class="mb-0">Intermediate</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">4.0 <small
+                          class="text-body-tertiary">(15,700)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$800 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$950</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-3.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Sina Ray</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-react.jpg" class="card-img-top" alt="logo react">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">How to easily create a website with React</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">3h 55m</p>
+                      <p class="mb-0 ps-2">🤯</p>
+                      <p class="mb-0">Advance</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">4.5 <small
+                          class="text-body-tertiary">(1,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$600 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$750</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-2.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">April Noms</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-graphql.jpg" class="card-img-top" alt="logo graphQl">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">GraphQL: introduction to graphQL for beginners</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">2h 40m</p>
+                      <p class="mb-0 ps-2">🤯</p>
+                      <p class="mb-0">Advance</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">2.5 <small
+                          class="text-body-tertiary">(1,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$500 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$600</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-5.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Brooklyn Simmons</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-graphql.jpg" class="card-img-top" alt="logo graphQl">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">GraphQL: introduction to graphQL for beginners</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">2h 40m</p>
+                      <p class="mb-0 ps-2">🤯</p>
+                      <p class="mb-0">Advance</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">2.5 <small
+                          class="text-body-tertiary">(1,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$500 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$600</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-5.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Brooklyn Simmons</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-graphql.jpg" class="card-img-top" alt="logo graphQl">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">GraphQL: introduction to graphQL for beginners</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">2h 40m</p>
+                      <p class="mb-0 ps-2">🤯</p>
+                      <p class="mb-0">Advance</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">2.5 <small
+                          class="text-body-tertiary">(1,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$500 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$600</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-5.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Brooklyn Simmons</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-graphql.jpg" class="card-img-top" alt="logo graphQl">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">GraphQL: introduction to graphQL for beginners</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">2h 40m</p>
+                      <p class="mb-0 ps-2">🤯</p>
+                      <p class="mb-0">Advance</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">2.5 <small
+                          class="text-body-tertiary">(1,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$500 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$600</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-5.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Brooklyn Simmons</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- navigation buttons -->
+        <div
+          class="swiper-button-prev popular-button-prev bg-white text-secondary border  border-success-subtle rounded-circle fw-bolder position-absolute">
+        </div>
+        <div
+          class="swiper-button-next popular-button-next bg-white text-secondary border border-success-subtle rounded-circle fw-bolder position-absolute">
+        </div>
+      </div>
+    </section>
+    <!-- Trending -->
+    <section class="container position-relative carousel-cards pt-5 pb-lg-4">
+      <div class="row ps-1 ps-lg-2 pb-2 pb-md-3 pb-lg-0">
+        <div class="col">
+          <h2>Trending</h2>
+        </div>
+      </div>
+      <div class="row px-3">
+        <div class="swiper swiper-trending px-lg-2 py-lg-3">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-gatsby.jpg" class="card-img-top" alt="logo gatsby">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">Revolutionize how you build the web</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">1h 46m</p>
+                      <p class="mb-0 ps-2">🙂</p>
+                      <p class="mb-0">Intermediate</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">2.0 <small
+                          class="text-body-tertiary">(16,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$800 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$850</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-6.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Jenny Wilson</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-javascript.jpg" class="card-img-top" alt="logo javascript">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">A Complete Beginner's Guide to JavaScript</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">4h 10m</p>
+                      <p class="mb-0 ps-2">🤯</p>
+                      <p class="mb-0">Advance</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">3.5 <small
+                          class="text-body-tertiary">(7,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$700 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$850</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-1.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Jenny Wilson</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-node.jpg" class="card-img-top" alt="logo node.js">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0 ellipsis">Beginning Node.js, Express &amp; MongoDB Development</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">2h 00m</p>
+                      <p class="mb-0 ps-2">🙂</p>
+                      <p class="mb-0">Intermediate</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">4.0 <small
+                          class="text-body-tertiary">(15,700)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$800 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$950</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-3.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Sina Ray</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-laravel.jpg" class="card-img-top" alt="logo laravel">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">Laravel: The Ultimate beginner's Guide to Learn</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">1h 00m</p>
+                      <p class="mb-0 ps-2">😁</p>
+                      <p class="mb-0">Beginner</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">4.5 <small
+                          class="text-body-tertiary">(2,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$170 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$220</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-7.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Sobo Rikhan</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-graphql.jpg" class="card-img-top" alt="logo graphQl">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">GraphQL: introduction to graphQL for beginners</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">2h 40m</p>
+                      <p class="mb-0 ps-2">🤯</p>
+                      <p class="mb-0">Advance</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">2.5 <small
+                          class="text-body-tertiary">(1,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$500 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$600</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-5.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Brooklyn Simmons</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-graphql.jpg" class="card-img-top" alt="logo graphQl">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">GraphQL: introduction to graphQL for beginners</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">2h 40m</p>
+                      <p class="mb-0 ps-2">🤯</p>
+                      <p class="mb-0">Advance</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">2.5 <small
+                          class="text-body-tertiary">(1,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$500 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$600</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-5.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Brooklyn Simmons</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-graphql.jpg" class="card-img-top" alt="logo graphQl">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">GraphQL: introduction to graphQL for beginners</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">2h 40m</p>
+                      <p class="mb-0 ps-2">🤯</p>
+                      <p class="mb-0">Advance</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">2.5 <small
+                          class="text-body-tertiary">(1,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$500 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$600</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-5.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Brooklyn Simmons</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img data-src="./assets/course-graphql.jpg" class="card-img-top" alt="logo graphQl">
+                <div class="card-body p-0">
+                  <div class="card-text-wrapper d-flex flex-column gap-2 p-3">
+                    <h6 class="mb-0">GraphQL: introduction to graphQL for beginners</h6>
+                    <div class="card-text d-flex align-items-center gap-1 text-secondary">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <p class="mb-0">2h 40m</p>
+                      <p class="mb-0 ps-2">🤯</p>
+                      <p class="mb-0">Advance</p>
+                    </div>
+                    <div class="card-rating d-flex align-items-center gap-2 py-1">
+                      <div class="rating-stars d-flex align-items-center">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                      </div>
+                      <p class="mb-0 d-flex align-items-center gap-1">2.5 <small
+                          class="text-body-tertiary">(1,500)</small>
+                      </p>
+                    </div>
+                    <div class="card-price">
+                      <p class="mb-0 fw-bolder">$500 <small
+                          class="fw-normal text-body-tertiary text-decoration-line-through">$600</small></p>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer bg-white text-secondary justify-content-between d-flex  align-items-center px-3 px-xl-3 py-xl-3">
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="card-teacher-photo">
+                        <img data-src="./assets/avatar-5.jpg" alt="Brooklyn Simmons" class="rounded-circle img-fluid">
+                      </div>
+                      <p class="mb-0">Brooklyn Simmons</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="bookmark">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- navigation buttons -->
+        <div
+          class="swiper-button-prev trending-button-prev bg-white text-secondary border  border-success-subtle rounded-circle fw-bolder position-absolute">
+        </div>
+        <div
+          class="swiper-button-next trending-button-next bg-white text-secondary border border-success-subtle rounded-circle fw-bolder position-absolute">
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="container-fluid d-flex pt-5">
+    <div class="container text-center text-lg-start">
+      <div class="row py-3">
+        <div class="col-12 col-lg-6 text-secondary">
+          <p class="text-capitalize mb-1">&copy; 2022 geeks. all rights reserved.</p>
+        </div>
+        <div class="col-12 col-lg-6 text-lg-end">
+          <a href="#" class="link-underline link-underline-opacity-0 text-secondary">Privacy</a>
+          <a href="#" class="link-underline link-underline-opacity-0 text-secondary ps-3">Terms</a>
+          <a href="#" class="link-underline link-underline-opacity-0 text-secondary ps-3">Feeedback</a>
+          <a href="#" class="link-underline link-underline-opacity-0 text-secondary ps-3">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
