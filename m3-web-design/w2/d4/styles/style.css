@@ -16,10 +16,13 @@ section h5,
 }
 
 /* Jumbotron */
+header {
+    background-color: #d0ebff65;
+}
+
 .jumbotron {
     overflow: hidden;
     position: relative;
-    background-color: #d0ebff65;
 }
 
 .jumbotron::before {
@@ -63,8 +66,13 @@ section h5,
 
 /* Ion Icon close section */
 ion-icon {
-    color: #212529;
+    z-index: 10;
+}
+
+ion-icon:hover {
     cursor: pointer;
+    color: #4d545b !important;
+    transition: all 150ms linear;
 }
 
 /* Cards */
@@ -112,15 +120,60 @@ ion-icon {
 }
 
 .testimonial .card {
-    width: 200px;
-    height: 100%;
+    width: 280px;
+    height: 350px;
 }
 
 .testimonial-img {
     height: 200px;
 }
 
+/* Carousel buttons */
+.carousel-control-prev {
+    left: 20px;
+}
+
+.carousel-control-next {
+    right: 20px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    top: 210px;
+    background: #000;
+    width: fit-content;
+    height: fit-content;
+}
+
 /* Hide Content */
 .hidden {
-    display: none;
+    opacity: 0;
+    left: 11px;
+    right: 12px;
+    position: absolute;
+    transform: translateY(-20%);
+    transition: all 100ms ease-out;
+}
+
+.collapse-section {
+    transition: all 150ms ease-out;
+}
+
+/* Modal */
+.modal-container {
+    bottom: 45vh;
+    z-index: 20;
+}
+
+.custom-modal {
+    width: max-content;
+}
+
+.blur-bg {
+    filter: blur(10px);
+}
+
+.modal-icon {
+    top: 2px;
+    right: -5px;
 }
