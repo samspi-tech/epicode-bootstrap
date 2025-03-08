@@ -29,7 +29,7 @@
             <li><a class="text-decoration-none fw-medium text-white active-link" href="#">TV Shows</a></li>
             <li><a class="text-decoration-none fw-medium" href="#">Movies</a></li>
             <li><a class="text-decoration-none fw-medium" href="#">New &amp; Popular</a></li>
-            <li><a class="text-decoration-none fw-medium" href="#">My List</a></li>
+            <li><a class="text-decoration-none fw-medium" href="./my-list.html">My List</a></li>
             <li><a class="text-decoration-none fw-medium" href="#">Browse by Languages</a></li>
           </ul>
           <!-- Dropdown Small Screens -->
@@ -131,7 +131,9 @@
                 <a href="#" class="text-white text-decoration-none">Sign out of Netflix</a>
               </div>
             </div>
-            <ion-icon class="profile-menu-arrow text-white" name="caret-down-outline"></ion-icon>
+            <div class="profile-menu-arrow d-flex align-items-center">
+              <ion-icon class="text-white" name="caret-down-outline"></ion-icon>
+            </div>
           </div>
         </div>
       </div>
@@ -222,7 +224,7 @@
   <!-- Main Content -->
   <main class="container-fluid p-5 mt-5 mt-md-0">
     <!-- Trending -->
-    <section class="container-fluid hide-section p-5">
+    <section class="container-fluid p-5">
       <div class="row">
         <div class="col pb-4">
           <h2 class="text-white fw-bolder">Trending Now</h2>
@@ -239,7 +241,7 @@
       </div>
     </section>
     <!-- Watch Again -->
-    <section class="container-fluid hidden-section p-5">
+    <section class="container-fluid hidden p-5">
       <div class="row">
         <div class="col pb-4">
           <h2 class="text-white fw-bolder">Watch It Again</h2>
@@ -247,7 +249,7 @@
       </div>
       <div class="row">
         <div class="col">
-          <div class="swiper watch-again-swiper overflow-visible position-relative">
+          <div class="swiper watch-again-swiper overflow-visible">
             <div class="swiper-wrapper"></div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-prev position-absolute d-none d-lg-flex"></div>
@@ -257,7 +259,7 @@
       </div>
     </section>
     <!-- New Releases -->
-    <section class="container-fluid hidden-section p-5">
+    <section class="container-fluid hidden p-5">
       <div class="row">
         <div class="col pb-4">
           <h2 class="text-white fw-bolder">New Releases</h2>
@@ -265,7 +267,7 @@
       </div>
       <div class="row">
         <div class="col">
-          <div class="swiper new-releases-swiper overflow-visible position-relative">
+          <div class="swiper new-releases-swiper overflow-visible">
             <div class="swiper-wrapper"></div>
             <div class="swiper-button-prev position-absolute d-none d-lg-flex"></div>
             <div class="swiper-button-next position-absolute d-none d-lg-flex"></div>
@@ -311,7 +313,7 @@
           <div class="col-12">
             <button class="btn bg-transparent rounded-0 border-secondary text-white-50 footer-btn">Service
               Code</button>
-            <p class="text-white-50 mt-3 footer-copyright">&copy; 1997-2025 Netflix, Inc.</p>
+            <p class="text-white-50 mt-5 footer-copyright">&copy; 1997-2025 Netflix, Inc.</p>
           </div>
         </div>
       </div>
@@ -325,10 +327,9 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./scripts/reusable-fuctions.js"></script>
-  <script src="./scripts/trending.js"></script>
-  <script src="./scripts/watch-again.js"></script>
-  <script src="./scripts/new-releases.js"></script>
+  <script src="./scripts/movies.js"></script>
   <script src="./scripts/main.js"></script>
+  <script src="./scripts/my-list.js"></script>
 </body>
 
 </html>

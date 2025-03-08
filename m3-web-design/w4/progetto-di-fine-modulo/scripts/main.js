@@ -19,11 +19,6 @@ const swiperTrending = new Swiper('.trending-swiper', {
             touchRatio: 0,
         },
         1440: {
-            slidesPerView: 5,
-            spaceBetween: 10,
-            touchRatio: 0,
-        },
-        1880: {
             slidesPerView: 6,
             spaceBetween: 10,
             touchRatio: 0,
@@ -56,11 +51,6 @@ const swiperWatchAgain = new Swiper('.watch-again-swiper', {
             touchRatio: 0,
         },
         1440: {
-            slidesPerView: 5,
-            spaceBetween: 10,
-            touchRatio: 0,
-        },
-        1880: {
             slidesPerView: 6,
             spaceBetween: 10,
             touchRatio: 0,
@@ -94,11 +84,6 @@ const swiperNewReleases = new Swiper('.new-releases-swiper', {
             touchRatio: 0,
         },
         1440: {
-            slidesPerView: 5,
-            spaceBetween: 10,
-            touchRatio: 0,
-        },
-        1880: {
             slidesPerView: 6,
             spaceBetween: 10,
             touchRatio: 0,
@@ -111,7 +96,7 @@ const swiperNewReleases = new Swiper('.new-releases-swiper', {
     },
 });
 
-// Add Movies
+// Create Movie Card
 const trendingContainer = document.querySelector(
     '.trending-swiper .swiper-wrapper'
 );
@@ -122,9 +107,161 @@ const newReleasesContainer = document.querySelector(
     '.new-releases-swiper .swiper-wrapper'
 );
 
-addMovieArray(trending, trendingContainer);
-addMovieArray(watchAgain, watchAgainContainer);
-addMovieArray(newReleases, newReleasesContainer);
+const createSlideImage = element => {
+    const slideImage = createElement('div');
+    addClass(slideImage, 'slide-image', 'position-relative');
+
+    const movieImage = createElement('img');
+    addClass(movieImage, 'card-img');
+    addAttribute(movieImage, 'data-src', `${element.img}`);
+    addAttribute(movieImage, 'alt', `${element.alt}`);
+
+    const slideMuteButton = createElement('button');
+    addClass(slideMuteButton, 'slide-mute-button');
+    slideMuteButton.innerHTML = `<ion-icon name="volume-mute-outline"></ion-icon>`;
+
+    appendElement(slideImage, movieImage, slideMuteButton);
+
+    return slideImage;
+};
+
+const createHiddenButtons = element => {
+    const hiddenThumbsContainer = createElement('div');
+    addClass(
+        hiddenThumbsContainer,
+        'hidden-thumbs-container',
+        'position-absolute',
+        'bg-dark',
+        'gap-4',
+        'd-flex',
+        'justify-content-center',
+        'rounded-pill'
+    );
+
+    const hiddenThumbUp = createElement('button');
+    addClass(
+        hiddenThumbUp,
+        'hidden-thumb-up',
+        'hidden-thumb',
+        'position-relative'
+    );
+    hiddenThumbUp.innerHTML = ` <ion-icon name="thumbs-up-outline" data-hidden-thumb="${element.alt}">
+                                </ion-icon>
+                                <span class="position-absolute bg-white text-black fw-medium px-3 py-1 mb-0 shadow">
+                                 I like this
+                                </span>`;
+
+    const hiddenThumbDown = createElement('button');
+    addClass(
+        hiddenThumbDown,
+        'hidden-thumb-down',
+        'hidden-thumb',
+        'position-relative'
+    );
+    hiddenThumbDown.innerHTML = ` <ion-icon name="thumbs-down-outline" data-hidden-thumb="${element.alt}">
+                                  </ion-icon>
+                                  <span class="position-absolute bg-white text-black fw-medium px-3 py-1 mb-0 shadow">
+                                  Not for me
+                                  </span>`;
+
+    appendElement(hiddenThumbsContainer, hiddenThumbUp, hiddenThumbDown);
+
+    return hiddenThumbsContainer;
+};
+
+const createSlideBodyButtons = element => {
+    const slideBodyButtons = createElement('div');
+    addClass(slideBodyButtons, 'slide-body-buttons', 'd-flex', 'gap-1');
+
+    const playButton = createElement('button');
+    playButton.innerHTML = `<ion-icon name="play"></ion-icon>`;
+
+    const addButton = createElement('button');
+    addClass(addButton, 'add-icon', 'position-relative');
+    addButton.innerHTML = `<ion-icon name="add"></ion-icon>
+                            <span class="position-absolute bg-white text-black fw-medium px-3 py-1 mb-0 shadow">Add to My List</span>`;
+
+    const thumbButton = createElement('div');
+    addClass(thumbButton, 'slide-thumb', 'position-relative');
+    thumbButton.innerHTML = `<ion-icon name="thumbs-up-outline" 
+                              data-slide-thumb="${element.alt}"></ion-icon>`;
+
+    appendElement(thumbButton, createHiddenButtons(element));
+
+    const chevronButton = createElement('button');
+    addClass(
+        chevronButton,
+        'chevron-down-icon',
+        'position-relative',
+        'ms-auto'
+    );
+    chevronButton.innerHTML = `<ion-icon name="chevron-down-outline"></ion-icon>
+                            <span class="position-absolute bg-white text-black fw-medium px-3 py-1 mb-0 shadow">More info</span>`;
+
+    appendElement(
+        slideBodyButtons,
+        playButton,
+        addButton,
+        thumbButton,
+        chevronButton
+    );
+
+    return slideBodyButtons;
+};
+
+const createSlideBodyInfo = element => {
+    const slideBodyInfo = createElement('div');
+    addClass(slideBodyInfo, 'slide-body-info');
+    slideBodyInfo.innerHTML = `<p>
+                                  <span class="maturity-num">${element.maturityRating}</span>
+                                  ${element.seasonLength}
+                                  <span class="player-feature-badge">${element.playerFeatureBadge}</span>
+                                </p>`;
+
+    return slideBodyInfo;
+};
+
+const createSlideBodyGenres = element => {
+    const slideBodyGenres = createElement('div');
+    addClass(slideBodyGenres, 'slide-body-genres', 'd-flex', 'gap-2');
+    slideBodyGenres.innerHTML = `<p>${element.genres[0]}</p>
+                                 <p>${element.genres[1]}</p>
+                                 <p>${element.genres[2]}</p>`;
+
+    return slideBodyGenres;
+};
+
+const createSlideBody = element => {
+    const slideBody = createElement('div');
+    addClass(slideBody, 'slide-body');
+
+    appendElement(
+        slideBody,
+        createSlideBodyButtons(element),
+        createSlideBodyInfo(element),
+        createSlideBodyGenres(element)
+    );
+    return slideBody;
+};
+
+const createMovieSlide = (array, container) => {
+    array.forEach(element => {
+        const slide = createElement('div');
+        addClass(slide, 'swiper-slide', 'slide');
+
+        appendElement(
+            slide,
+            createSlideImage(element),
+            createSlideBody(element)
+        );
+
+        return appendElement(container, slide);
+    });
+};
+
+createMovieSlide(trending, trendingContainer);
+createMovieSlide(watchAgain, watchAgainContainer);
+createMovieSlide(newReleases, newReleasesContainer);
 
 // Lazy Loading Images
 const lazyImages = document.querySelectorAll('img[data-src]');
@@ -149,40 +286,59 @@ const lazyImageObserver = new IntersectionObserver(
 observeElement(lazyImageObserver, lazyImages);
 
 // Observe Sections
-const section = document.querySelectorAll('section');
+const sections = document.querySelectorAll('section.hidden');
 
 const sectionObserver = new IntersectionObserver(
     (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                addClass(entry.target, 'show-section');
+                removeClass(entry.target, 'hidden');
+                addClass(entry.target, 'slide-up');
                 observer.unobserve(entry.target);
             }
         });
     },
     {
         root: null,
-        threshold: 0.4,
+        threshold: 0.65,
     }
 );
 
-observeElement(sectionObserver, section);
+observeElement(sectionObserver, sections);
 
 // Like or Dislike Movie
-const cardThumbButtons = document.querySelectorAll('.card-thumb > ion-icon');
+const slideImages = document.querySelectorAll('.card-img');
+const cardThumbButtons = document.querySelectorAll('.slide-thumb > ion-icon');
 const hiddenThumbButtons = document.querySelectorAll('.hidden-thumb ion-icon');
+
+const isThumbUp = hiddenThumb => {
+    return hiddenThumb.getAttribute('name') === 'thumbs-up-outline'
+        ? 'thumbs-up'
+        : 'thumbs-down';
+};
 
 hiddenThumbButtons.forEach(hiddenThumb => {
     hiddenThumb.addEventListener('click', () => {
-        const hiddenThumbName = hiddenThumb.getAttribute('name');
-        const hiddenThumbMovieTitle =
-            hiddenThumb.getAttribute('data-hidden-thumb');
-
         cardThumbButtons.forEach(cardThumb => {
-            const thumbCardTitle = cardThumb.getAttribute('data-card-thumb');
+            const isSlideAndThumbTheSameAttribute =
+                getAttribute(hiddenThumb, 'data-hidden-thumb') ===
+                getAttribute(cardThumb, 'data-slide-thumb');
 
-            hiddenThumbMovieTitle === thumbCardTitle &&
-                cardThumb.setAttribute('name', hiddenThumbName);
+            isSlideAndThumbTheSameAttribute &&
+                cardThumb.setAttribute('name', isThumbUp(hiddenThumb));
+
+            slideImages.forEach(image => {
+                const isMovieLiked = isThumbUp(hiddenThumb) === 'thumbs-up';
+                const isImageAndThumbTheSameAttribute =
+                    getAttribute(image, 'alt') ===
+                    getAttribute(hiddenThumb, 'data-hidden-thumb');
+
+                if (isMovieLiked && isImageAndThumbTheSameAttribute) {
+                    removeClass(image, 'gray-image');
+                } else if (isImageAndThumbTheSameAttribute) {
+                    addClass(image, 'gray-image');
+                }
+            });
         });
     });
 });
@@ -210,7 +366,7 @@ const searchBarVisibility = e => {
 
 document.addEventListener('click', searchBarVisibility);
 
-// Show Genres Dropdown Menu
+// Bottom Navbar: Show Genres Dropdown Menu
 const genresMenu = document.querySelector('.genres-menu');
 const genresButton = document.querySelector('.genres-button');
 
@@ -229,7 +385,7 @@ const genresMenuVisibility = e => {
 
 document.addEventListener('click', genresMenuVisibility);
 
-// Toggle Background to Bottom Row Nav on Scroll
+// Bottom Navbar: Toggle Background on Scroll
 const bottomRowNav = document.querySelector('.bottom-row-nav');
 
 const toggleBottomNavBackground = () => {
